@@ -1,14 +1,14 @@
 # ArpaRadar: Seguiment d'avions amb receptor ADS-B
 
-Aquest projecte permet visualitzar en temps real avions que passen per una zona concreta, mostrant per pantalla d'on vénen quan travessen un espai aeri definit. Les dades es capturen mitjançant un receptor ADS-B i es processen per identificar si un avió entra dins d’un volum 3D d’interès.
+Aquest projecte permet visualitzar en temps real avions que passen pel cel de Barcelona, mostrant per pantalla d'on vénen quan travessen un espai aeri definit. Les dades es capturen mitjançant un receptor ADS-B i es processen per identificar si un avió entra dins d’un volum 3D d’interès.
 
 ---
 
 ## 🎯 Motivació
 
-Tot va començar durant una visita amb uns amics al **mirador d'avions del Prat de Llobregat**. Ens vam entretenir consultant **d'on venien els avions amb FlightRadar**, tot intentant endevinar el trajecte abans que aterressin.
+Tot va començar durant una visita amb uns amics al **mirador d'avions del Prat de Llobregat**. Ens vam entretenir consultant **d'on venien els avions amb FlightRadar**, tot intentant endevinar l'origen abans que aterressin.
 
-Des de casa meva també es poden veure molts dels avions que després passen pel mirador. Després d’aquella experiència, em vaig aficionar a observar les rutes i vaig decidir muntar un sistema propi per fer-ho:
+Des de casa meva també es poden veure els avions que després passen pel mirador. Després d’aquella experiència, em vaig aficionar a observar les rutes i vaig decidir muntar un sistema propi per fer-ho:
 
 - 📡 Vaig comprar un **receptor de senyal ADS-B**
 - 💻 Vaig instal·lar el programari **dump1090** en un **miniPC**
@@ -70,8 +70,7 @@ Aquest repositori conté tot el codi necessari per a fer-ho funcionar.
 ---
 
 ## 🧪 Exemple d’ús
-
-<img src="docs/example.gif" width="600">
+![Screenshot from 2025-06-18 22-29-49](https://github.com/user-attachments/assets/7bc5e0fa-2b36-40b9-8769-998f441ee510)
 
 ---
 
