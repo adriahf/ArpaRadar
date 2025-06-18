@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArpaRadar</title>
+
+    <!-- Enllaç als estils CSS externs -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Element on es mostra el nom o codi de sortida del vol actual -->
+    <div id="departure-info"></div>
+
+    <!-- Contenidor principal de l'animació -->
+    <div id="animation-container" class="container">
+        
+        <!-- Capa d'edificis (al davant) -->
+        <img src="../static/images/buildings.png" alt="Edificis" class="layer buildings">
+
+        <!-- Capa de fons (al darrere) -->
+        <img src="../static/images/background.png" alt="Fons" class="layer background">
+        
+        <!-- Els avions s’afegiran dinàmicament mitjançant JavaScript -->
+    </div>
+
+    <!-- Script principal que gestiona la lògica de l’animació -->
+    <script src="script.js"></script>
+</body>
+</html>

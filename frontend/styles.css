@@ -1,0 +1,83 @@
+/* 
+ * Estils globals per eliminar marges i fer que el body ocupi tota la pantalla.
+ * També s'amaga l'scroll per evitar que es mostri quan les capes es desplacen.
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*
+ * Contenidor principal que ocupa tota la finestra del navegador.
+ * Es fa servir com a marc per col·locar les diferents capes.
+ */
+.container {
+    position: relative;
+    width: 100vw;  /* Amplada completa de la finestra del navegador */
+    height: 100vh; /* Alçada completa de la finestra del navegador */
+    overflow: hidden;
+}
+
+/* 
+ * Classes genèriques per a capes. Totes les capes ocupen el mateix espai
+ * i es posicionen absolutament dins del contenidor.
+ */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'element s'ajusta sense deformar-se i cobreix tota la capa */
+}
+
+/* 
+ * Capa de fons (background) amb z-index més baix perquè quedi al darrere.
+ */
+.background {
+    z-index: 1;
+}
+
+/*
+ * Capa d'edificis, que se situa per sobre del fons però per sota dels avions.
+ */
+.buildings {
+    z-index: 3;
+}
+
+/*
+ * Avió. Té una mida fixa i es col·loca per sobre del fons, però per sota dels edificis.
+ * La posició "bottom: 50%" el situa aproximadament a mitja alçada.
+ */
+.plane {
+    position: absolute;
+    bottom: 50%;
+    width: 50px;
+    z-index: 2;
+}
+
+/*
+ * Informació de sortida (departure-info). 
+ * Estil fixat a la cantonada superior esquerra, amb tipografia destacada i ombres
+ * per garantir una bona llegibilitat sobre qualsevol fons.
+ */
+#departure-info {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 4;
+    padding: 50px;
+    font-size: 80px;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+
+    /* Ombra múltiple per millorar contrast i llegibilitat */
+    text-shadow: 
+        -5px 0 black, 
+         0 5px black, 
+         5px 0 black, 
+         0 -5px black;
+}
