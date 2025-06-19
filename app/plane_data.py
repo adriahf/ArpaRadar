@@ -67,7 +67,7 @@ def get_aircraft_positions():
         inside = helpers.is_point_inside_3d_figure(point, helpers.VERTICES, helpers.FACES)
 
         airplane.percentage = -1  # Reset
-
+        route_info_counter = 0 # Intents per obtenir la ruta
         if inside:
             # Si no tenim info d'origen, l'intentem obtenir
             if airplane.departure is None:
@@ -77,7 +77,10 @@ def get_aircraft_positions():
                     airplane.departure = airport_info
                 except Exception as e:
                     print(f"[ERROR] No s'ha pogut obtenir ruta per {icao}: {e}")
-                    airplane.departure = "Desconegut"
+                    route_info_counter += 1
+                    if route_info_counter > 5:
+                        print("[WARNING] S'ha superat el límit d'intents per obtenir la ruta.")
+                        airplane.departure = "Desconegut"
 
             # Només calculem el percentatge si és dins la figura
             percentage = helpers.calculate_relative_distance(point, helpers.VERTICES)
