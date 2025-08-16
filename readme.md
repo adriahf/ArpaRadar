@@ -49,6 +49,7 @@ Aquest repositori conté tot el codi necessari per a fer-ho funcionar.
    ```env
    DUMP1090_URL=http://[ip_del_pc]:1090/data/aircraft.json
    OBSERVACIONS_FILE=[nom_del_fitxer].csv
+   ROUTE_API_URL=[URL_DE_L_API]
    ```
 
 2. **Executa el servidor Flask**:
